@@ -1,0 +1,135 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.web-view {
+  display: block;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.page-banner {
+  width: 100%;
+  height: 600px;
+  overflow: hidden; /* Prevents image overflow */
+  position: relative;
+}
+
+.image-size-adjust {
+  width: 100%;
+  height: 100%; /* Ensure it fits the container height */
+  object-fit: cover; /* Crops image to fill the div without distortion */
+  display: block;
+  animation: zoomInOut 25s infinite alternate ease-in-out;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25); /* Slight zoom-in */
+  }
+  100% {
+    transform: scale(1); /* Back to normal */
+  }
+}
+
+.career-steps {
+  padding: 30px 10px;
+  background-color: #ebebeb;
+  .career-step-banner {
+    text-align: center;
+  }
+
+  .card-containers {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.our-vision-contaner {
+  padding: 30px 20px;
+  background-image: url("/assets/vision-banner.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  .about-vision {
+    width: 60%;
+    color: #fff;
+    h1 {
+      line-height: 1.5;
+      font-size: 46px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.sign-up-banner {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  .sign-up-banner-container {
+    width: 80%;
+    display: flex;
+    .sign-up-left {
+      width: 60%;
+      height: -webkit-fill-available;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .sign-up-details {
+        width: 85%;
+        height: 85%;
+        .signup-btn {
+          background-color: #3f51b5;
+          color: #fff;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+    .sign-up-right {
+      width: 40%;
+      background-image: url("/assets/sign-up.jpg");
+      background-size: cover;
+      height: -webkit-fill-available;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile-view {
+    display: block;
+  }
+
+  .web-view {
+    display: none;
+  }
+
+  .career-steps .card-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-card-view {
+    margin: 40px 0px;
+    width: 70%;
+  }
+}
