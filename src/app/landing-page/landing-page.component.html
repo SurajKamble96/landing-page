@@ -1,0 +1,76 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon mobile-view"
+    style="background: none; border: none; color: #fff"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="web-view">My Landing Page</span>
+  <span class="example-spacer"></span>
+  <div style="display: flex;">
+    <button class="login-btn web-view" style="margin-right: 5px;" aria-label="Login button" (click)="login()">Login</button>
+    <button class="login-btn web-view" style="margin-right: 5px;" aria-label="Sign up button">Sign up</button>
+  </div>
+</mat-toolbar>
+
+<div class="page-banner">
+  <img
+    src="/assets/career.jpg"
+    class="image-size-adjust"
+    alt="Banner"
+    srcset=""
+  />
+</div>
+
+<div class="career-steps">
+  <div class="career-step-banner">
+    <h1>Here's what you can do</h1>
+  </div>
+  <div class="card-containers">
+    <mat-card
+      *ngFor="let i of cardContents"
+      class="example-card mobile-card-view"
+      style="width: 300px"
+    >
+      <mat-card-header style="padding-bottom: 20px">
+        <mat-card-title>{{ i.title }}</mat-card-title>
+      </mat-card-header>
+
+      <img mat-card-image [src]="i.image" style="height: 200px" [alt]="i.alt" />
+
+      <mat-card-content style="padding: 10px 10px;">
+        <p>
+          {{ i.content }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="our-vision-contaner">
+  <div class="about-vision">
+    <h1>We always thrive to be more better!</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto tempora voluptas id nulla minus reiciendis amet voluptatem quaerat pariatur maxime officia voluptate similique, nam rem quas quidem ut officiis recusandae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque ex accusantium voluptates consequatur, ut porro eligendi magnam omnis veniam, facere deserunt incidunt voluptatem dolor eius asperiores in corrupti deleniti est!</p>
+  </div>
+</div>
+
+<div class="sign-up-banner">
+  <div class="sign-up-banner-container">
+    <div class="sign-up-left">
+      <div class="sign-up-details">
+        <div>
+          <h2 style="font-size: 27px;">Boost your skills to next level</h2>
+        </div>
+        <div>
+          <p style="font-size: 17px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quaerat nam culpa esse nulla, quia magnam atque molestiae. Ab exercitationem adipisci assumenda enim maxime mollitia suscipit, excepturi explicabo dolores velit.</p>
+          <button class="signup-btn" type="submit">Register Now!</button>
+        </div>
+      </div>
+    </div>
+    <div class="sign-up-right">
+
+    </div>
+  </div>
+</div>

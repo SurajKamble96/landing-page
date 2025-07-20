@@ -1,0 +1,46 @@
+<div class="login-container">
+  <div class="login-page-content">
+    <div class="login-content">
+      <div class="login-title">
+        <h1>User Login</h1>
+        <form class="example-form form-adjust">
+          <mat-form-field class="example-full-width form-width-login">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              [formControl]="emailFormControl"
+              [errorStateMatcher]="matcher"
+              placeholder="Ex. pat@example.com"
+            />
+            
+            @if (emailFormControl.hasError('email') &&
+            !emailFormControl.hasError('required')) {
+            <mat-error>Please enter a valid email address</mat-error>
+            } @if (emailFormControl.hasError('required')) {
+            <mat-error>Email is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width form-width-login">
+            <mat-label>Password</mat-label>
+            <input
+              type="password"
+              matInput
+              [formControl]="passwordControl"
+              placeholder="Enter your password"
+            />
+            @if (passwordControl.hasError('required')) {
+            <mat-error>Password is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+          <button mat-raised-button color="primary">Login</button>
+          <div class="hyper-link-signup" style="margin: 20px 0px;">
+            <p>Dont have account? <a href="#">Sign in here</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="login-banner"></div>
+</div>
