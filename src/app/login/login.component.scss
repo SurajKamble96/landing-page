@@ -1,0 +1,37 @@
+.login-container{
+    display: flex;
+    .login-page-content{
+        width: 30%;
+        height: 100vh;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .login-content{
+            width: 80%;
+            height: 80%;
+            padding: 30px 20px;
+            .login-title{
+                text-align: center;
+                margin: 20px 0px;
+                h1{
+                    font-size: 30px;
+                }
+                .form-adjust{
+                    margin: 100px 0px;
+                    padding: 30px 10px;
+                    .form-width-login{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .login-banner{
+        width: 70%;
+        height: 100vh;
+        background-image: url('/assets/login-banner.jpg');
+        background-size: cover;
+        filter: blur(2px);
+    }
+}
